@@ -1,0 +1,142 @@
+/* Cart.css */
+
+.cart-container {
+  position: fixed;
+  right: 20px;
+  top: 100px;
+  width: 400px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 1000;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  h2 {
+    font-family: Manrope;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24.59px;
+    letter-spacing: 1.2857142686843872px;
+    text-align: left;
+  }
+  button {
+    font-family: Manrope;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 25px;
+    text-align: left;
+    color: #d87d4a;
+    text-decoration: none;
+  }
+}
+
+.cart-header h2 {
+  margin: 0;
+}
+
+.remove-all {
+  background: none;
+  border: none;
+  color: #f00;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.cart-items {
+  flex-grow: 1;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cart-item img {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.item-details {
+  flex-grow: 1;
+  h3 {
+    font-family: Manrope;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 25px;
+    text-align: left;
+  }
+  p {
+    font-family: Manrope;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 25px;
+    text-align: left;
+  }
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-controls button {
+  background: none;
+  border: 1px solid #000;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.quantity-controls span {
+  margin: 0 10px;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  h3 {
+    font-family: Manrope;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+    text-align: left;
+  }
+  p {
+    font-family: Manrope;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24.59px;
+    text-align: center;
+  }
+}
+
+.checkout-button {
+  background: #ff8c00;
+  border: none;
+  color: white;
+  padding: 15px;
+  margin-top: 20px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  font-family: Manrope;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 17.76px;
+  letter-spacing: 1px;
+  text-align: center;
+
+  border-radius: 8px;
+}

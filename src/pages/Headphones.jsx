@@ -1,24 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./Headphones.css";
 import { Link } from "react-router-dom";
-import x992 from "../assets/product-xx99-mark-two-headphones/desktop/image-product.jpg";
-import x991 from "../assets/product-xx99-mark-one-headphones/desktop/image-product.jpg";
-import xx59 from "../assets/product-xx59-headphones/desktop/image-product.jpg";
-
-export const imgs = {
-  "xx99-mark-two-headphones": x992,
-  "xx99-mark-one-headphones": x991,
-  "xx59-headphones": xx59,
-};
 
 function Headphones() {
   const [headphones, setHeadphones] = useState([]);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(
-      "https://online-json-server-api.up.railway.app/project/665eff2b1d2cd3eb1142aa96"
-    )
+    fetch("http://localhost:3000/product")
       .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
@@ -48,7 +37,7 @@ function Headphones() {
           <div className="card-headphone" key={headphone.id}>
             {index % 2 === 0 ? (
               <>
-                <img src={imgs[headphone.slug]} alt="" width={540} />
+                <img src={headphone.image.desktop} alt="" width={540} />
                 <div className="headphone-item">
                   <p className="text-new">
                     {headphone.new === true ? "NEW PRODUCT" : ""}
@@ -72,7 +61,7 @@ function Headphones() {
                     SEE PRODUCT
                   </Link>
                 </div>
-                <img src={imgs[headphone.slug]} alt="" width={540} />
+                <img src={headphone.image.desktop} alt="" width={540} />
               </>
             )}
           </div>

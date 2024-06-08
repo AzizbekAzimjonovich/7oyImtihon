@@ -12,7 +12,7 @@ function App() {
           element: <Home />,
         },
         {
-          path: "/:id",
+          path: "/product/:id",
           element: <SingleProducts />,
         },
         {
